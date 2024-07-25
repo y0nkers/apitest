@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirect all requests to /api/user.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/(.*)$ api/core.php/$1 [L,QSA]
